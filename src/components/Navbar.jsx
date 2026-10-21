@@ -16,15 +16,26 @@ export default function Navbar({ lang, contact, onOpenBookingModal }) {
     <header className="sticky top-0 z-40 bg-white/98 backdrop-blur-md border-b border-stone-200 shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 sm:h-20">
-          {/* Brand Name */}
-          <a href="#" className="flex flex-col justify-center py-1">
-            <span className="text-2xl sm:text-3xl font-black text-stone-900 tracking-tight leading-tight">
-              {lang === 'mr' ? 'श्रीनाथ ॲग्रीटेक' : 'Shrinath Agritech'}
-            </span>
-            <p className="text-xs sm:text-xs font-bold text-emerald-800">
-              {lang === 'mr' ? 'होलसेल भाजीपाला रोप नर्सरी • सटाणा (नाशिक)' : 'Wholesale Vegetable Seedling Nursery • Satana'}
-            </p>
-          </a>
+          {/* Brand Name (without mono; active call button icon) */}
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <a
+              href={`tel:${contact.phone}`}
+              className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-emerald-700 hover:bg-emerald-600 text-white flex items-center justify-center shadow-md shadow-emerald-800/20 border border-emerald-600 shrink-0 transition active:scale-95 cursor-pointer"
+              title={lang === 'mr' ? 'थेट कॉल करा: ' + contact.phoneDisplay : 'Call Directly: ' + contact.phoneDisplay}
+            >
+              <Phone className="w-5 h-5 text-amber-300" />
+            </a>
+            <a href="#" className="group flex flex-col">
+              <div className="flex items-baseline gap-1">
+                <span className="text-xl sm:text-2xl font-black text-stone-900 tracking-tight group-hover:text-emerald-800 transition">
+                  {lang === 'mr' ? 'श्रीनाथ ॲग्रीटेक' : 'Shrinath Agritech'}
+                </span>
+              </div>
+              <p className="text-xs sm:text-xs font-bold text-emerald-800">
+                {lang === 'mr' ? 'होलसेल भाजीपाला रोप नर्सरी • सटाणा (नाशिक)' : 'Wholesale Vegetable Seedling Nursery • Satana'}
+              </p>
+            </a>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-bold text-stone-700">
