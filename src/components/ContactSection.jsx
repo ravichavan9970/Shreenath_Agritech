@@ -9,8 +9,12 @@ export default function ContactSection({ lang, contact }) {
           {/* Left: Contact Info (Col 7) */}
           <div className="lg:col-span-6 space-y-6">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-emerald-600 flex items-center justify-center text-white shrink-0">
-                <Sprout className="w-7 h-7" />
+              <div className="w-14 h-14 rounded-2xl overflow-hidden bg-stone-950 shadow-md border border-stone-700 shrink-0 p-0.5 flex items-center justify-center">
+                <img
+                  src={contact.logo || "/images/logo.jpg"}
+                  alt="श्रीनाथ ॲग्रीटेक लोगो"
+                  className="w-full h-full object-cover rounded-xl"
+                />
               </div>
               <div>
                 <h3 className="text-2xl font-black text-white">
@@ -50,13 +54,13 @@ export default function ContactSection({ lang, contact }) {
                     {contact.address[lang]}
                   </p>
                   <a
-                    href="https://maps.google.com/?q=Asthane,Malegaon,Nashik"
+                    href={contact.googleMapsLink || "https://goo.gl/maps/uourzdP5nz3txvgu7?g_st=aw"}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-400 hover:text-emerald-300 mt-2"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-300 hover:text-amber-200 mt-2.5 bg-stone-700/80 px-3 py-1.5 rounded-lg border border-stone-600 transition"
                   >
-                    <Navigation className="w-3.5 h-3.5" />
-                    <span>{lang === 'mr' ? 'गुगल मॅप्सवर रस्ता पहा' : 'View on Google Maps'}</span>
+                    <Navigation className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>{lang === 'mr' ? '📍 गुगल मॅप्सवर थेट लोकेशन पहा' : '📍 Open in Google Maps'}</span>
                   </a>
                 </div>
               </div>
@@ -95,17 +99,28 @@ export default function ContactSection({ lang, contact }) {
           </div>
 
           {/* Right: Embedded Google Map (Col 5) */}
-          <div className="lg:col-span-6 h-64 sm:h-80 rounded-2xl overflow-hidden border-2 border-stone-700 shadow-lg bg-stone-800">
-            <iframe
-              src={contact.googleMapsEmbed}
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Shreenath Agritech Nursery Asthane Malegaon"
-            ></iframe>
+          <div className="lg:col-span-6 flex flex-col gap-3">
+            <div className="h-64 sm:h-80 rounded-2xl overflow-hidden border-2 border-stone-700 shadow-lg bg-stone-800">
+              <iframe
+                src={contact.googleMapsEmbed}
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Shreenath Agritech Nursery Asthane Malegaon"
+              ></iframe>
+            </div>
+            <a
+              href={contact.googleMapsLink || "https://goo.gl/maps/uourzdP5nz3txvgu7?g_st=aw"}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center gap-2 bg-stone-800 hover:bg-stone-700 text-emerald-300 border border-stone-700 p-3 rounded-xl font-bold text-xs sm:text-sm transition"
+            >
+              <Navigation className="w-4 h-4 text-emerald-400" />
+              <span>{lang === 'mr' ? '📍 थेट गुगल मॅप्स उघडा (https://goo.gl/maps/uourzdP5nz3txvgu7)' : '📍 Open Location in Google Maps (https://goo.gl/maps/uourzdP5nz3txvgu7)'}</span>
+            </a>
           </div>
         </div>
 

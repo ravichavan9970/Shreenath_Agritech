@@ -18,8 +18,12 @@ export default function Navbar({ lang, contact, onOpenBookingModal }) {
         <div className="flex items-center justify-between h-18 sm:h-20">
           {/* Logo & Name */}
           <a href="#" className="flex items-center gap-3">
-            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-emerald-600 to-green-700 flex items-center justify-center text-white shadow-md shadow-emerald-700/20 shrink-0">
-              <Sprout className="w-6 h-6 sm:w-7 sm:h-7" />
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl overflow-hidden bg-stone-950 shadow-md border border-stone-200 shrink-0 flex items-center justify-center p-0.5">
+              <img
+                src={contact.logo || "/images/logo.jpg"}
+                alt="श्रीनाथ ॲग्रीटेक लोगो"
+                className="w-full h-full object-cover rounded-xl"
+              />
             </div>
             <div>
               <div className="flex items-baseline gap-1">

@@ -20,8 +20,18 @@ export default function TopBar({ lang, setLang, contact }) {
           </span>
         </div>
 
-        {/* Right: Phone & Simple Language Button */}
+        {/* Right: Location, Phone & Simple Language Button */}
         <div className="flex items-center gap-3 sm:gap-4">
+          <a
+            href={contact.googleMapsLink || "https://goo.gl/maps/uourzdP5nz3txvgu7?g_st=aw"}
+            target="_blank"
+            rel="noreferrer"
+            className="hidden md:flex items-center gap-1 text-emerald-200 hover:text-white font-semibold text-xs transition"
+          >
+            <MapPin className="w-3.5 h-3.5 text-amber-400" />
+            <span>{lang === 'mr' ? 'अस्थाने, मालेगाव' : 'Asthane, Malegaon'}</span>
+          </a>
+
           <a
             href={`tel:${contact.phone}`}
             className="flex items-center gap-1.5 font-bold hover:text-amber-300 transition text-xs sm:text-sm"

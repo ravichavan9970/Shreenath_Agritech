@@ -1,5 +1,6 @@
 export const siteData = {
   contact: {
+    logo: "/images/logo.jpg",
     phone: "+91 9604983818",
     phoneDisplay: "+91 96049 83818",
     whatsapp: "919604983818",
@@ -9,6 +10,7 @@ export const siteData = {
       mr: "मु. पो. अस्थाने, ता. मालेगाव, जि. नाशिक, महाराष्ट्र - ४२३२०४",
       en: "At Post Asthane, Taluka Malegaon, Dist. Nashik, Maharashtra - 423204"
     },
+    googleMapsLink: "https://goo.gl/maps/uourzdP5nz3txvgu7?g_st=aw",
     googleMapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119747.88147610411!2d74.45398248883656!3d20.551717208889246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bde452fcf3e6397%3A0xe968b54e7d9b93b!2sAsthane%2C%20Maharashtra%20423204!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
     workingHours: {
       mr: "सोमवार ते रविवार: सकाळी ७:०० ते रात्री ८:००",
