@@ -65,7 +65,7 @@ export default function Hero({ lang, contact, onOpenBookingModal }) {
                 className="flex items-center justify-center gap-2 bg-stone-900 hover:bg-stone-800 text-white px-6 py-4 rounded-2xl font-black text-base sm:text-lg shadow-md transition active:scale-95"
               >
                 <Phone className="w-5 h-5 text-amber-400" />
-                <span>{lang === 'mr' ? 'कॉल करा: ९६०४९ ८३८१८' : 'Call: 96049 83818'}</span>
+                <span>{lang === 'mr' ? 'थेट कॉल करा' : 'Call Directly'}</span>
               </a>
             </div>
 

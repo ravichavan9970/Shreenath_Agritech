@@ -16,26 +16,26 @@ export default function Navbar({ lang, contact, onOpenBookingModal }) {
     <header className="sticky top-0 z-40 bg-white/98 backdrop-blur-md border-b border-stone-200 shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 sm:h-20">
-          {/* Brand Name (without mono; active call button icon) */}
-          <div className="flex items-center gap-2.5 sm:gap-3">
-            <a
-              href={`tel:${contact.phone}`}
-              className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-emerald-700 hover:bg-emerald-600 text-white flex items-center justify-center shadow-md shadow-emerald-800/20 border border-emerald-600 shrink-0 transition active:scale-95 cursor-pointer"
-              title={lang === 'mr' ? 'थेट कॉल करा: ' + contact.phoneDisplay : 'Call Directly: ' + contact.phoneDisplay}
-            >
-              <Phone className="w-5 h-5 text-amber-300" />
-            </a>
-            <a href="#" className="group flex flex-col">
+          {/* Logo & Name */}
+          <a href="#" className="flex items-center gap-3">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl overflow-hidden bg-stone-950 shadow-md border border-stone-200 shrink-0 flex items-center justify-center p-0.5">
+              <img
+                src={contact.logo || "/images/logo.jpg"}
+                alt="श्रीनाथ ॲग्रीटेक लोगो"
+                className="w-full h-full object-cover rounded-xl"
+              />
+            </div>
+            <div>
               <div className="flex items-baseline gap-1">
-                <span className="text-xl sm:text-2xl font-black text-stone-900 tracking-tight group-hover:text-emerald-800 transition">
+                <span className="text-xl sm:text-2xl font-black text-stone-900 tracking-tight">
                   {lang === 'mr' ? 'श्रीनाथ ॲग्रीटेक' : 'Shrinath Agritech'}
                 </span>
               </div>
               <p className="text-xs sm:text-xs font-bold text-emerald-800">
                 {lang === 'mr' ? 'होलसेल भाजीपाला रोप नर्सरी • सटाणा (नाशिक)' : 'Wholesale Vegetable Seedling Nursery • Satana'}
               </p>
-            </a>
-          </div>
+            </div>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-bold text-stone-700">
@@ -54,10 +54,11 @@ export default function Navbar({ lang, contact, onOpenBookingModal }) {
           <div className="hidden sm:flex items-center gap-2.5">
             <a
               href={`tel:${contact.phone}`}
-              className="flex items-center gap-1.5 bg-stone-100 hover:bg-stone-200 text-stone-900 px-3.5 py-2.5 rounded-xl font-bold text-sm border border-stone-300 transition"
+              className="flex items-center gap-1.5 bg-stone-100 hover:bg-stone-200 text-stone-900 px-4 py-2.5 rounded-xl font-bold text-sm border border-stone-300 transition"
+              title={lang === 'mr' ? `कॉल करा: ${contact.phoneDisplay}` : `Call: ${contact.phoneDisplay}`}
             >
               <Phone className="w-4 h-4 text-emerald-600" />
-              <span>{contact.phoneDisplay}</span>
+              <span>{lang === 'mr' ? 'थेट कॉल करा' : 'Call Us'}</span>
             </a>
 
             <a
@@ -131,7 +132,7 @@ export default function Navbar({ lang, contact, onOpenBookingModal }) {
                 className="w-full flex items-center justify-center gap-2 bg-stone-900 text-white py-3.5 rounded-xl font-bold text-base shadow-sm"
               >
                 <Phone className="w-5 h-5 text-emerald-400" />
-                <span>{contact.phoneDisplay}</span>
+                <span>{lang === 'mr' ? 'थेट कॉल करा' : 'Call Directly'}</span>
               </a>
             </div>
           </div>

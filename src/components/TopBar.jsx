@@ -37,9 +37,10 @@ export default function TopBar({ lang, setLang, contact }) {
           <a
             href={`tel:${contact.phone}`}
             className="flex items-center gap-1.5 font-bold hover:text-amber-300 transition text-xs sm:text-sm"
+            title={lang === 'mr' ? `कॉल करा: ${contact.phoneDisplay}` : `Call: ${contact.phoneDisplay}`}
           >
             <Phone className="w-3.5 h-3.5 text-amber-400" />
-            <span>{contact.phoneDisplay}</span>
+            <span>{lang === 'mr' ? 'थेट कॉल करा' : 'Call Now'}</span>
           </a>
 
           {/* Simple Language Switcher */}
