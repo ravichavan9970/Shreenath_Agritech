@@ -9,7 +9,7 @@ export default function VarietyDetailModal({ variety, lang, contact, onClose }) 
   const waText = encodeURIComponent(
     lang === 'mr'
       ? `नमस्कार श्रीनाथ ॲग्रीटेक,\nमला *${variety.name.mr}* या रोपांचे बुकिंग करायचे आहे.\nकृपया चालू दर व डिलिव्हरी माहिती द्यावी.`
-      : `Hello Shreenath Agritech,\nI would like to book *${variety.name.en}* seedlings.\nPlease provide rates and delivery schedule.`
+      : `Hello Shrinath Agritech,\nI would like to book *${variety.name.en}* seedlings.\nPlease provide rates and delivery schedule.`
   );
 
   return (

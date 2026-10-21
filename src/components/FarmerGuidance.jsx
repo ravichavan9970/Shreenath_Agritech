@@ -115,7 +115,7 @@ export default function FarmerGuidance({ lang, contact }) {
                   href={`https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(
                     lang === 'mr'
                       ? 'नमस्कार श्रीनाथ ॲग्रीटेक, मला शेती व्यवस्थापन व रोप लागवडीबाबत सल्ला हवा आहे.'
-                      : 'Hello Shreenath Agritech, I need agronomic advice regarding seedling management.'
+                      : 'Hello Shrinath Agritech, I need agronomic advice regarding seedling management.'
                   )}`}
                   target="_blank"
                   rel="noreferrer"

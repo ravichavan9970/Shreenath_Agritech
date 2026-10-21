@@ -19,7 +19,7 @@ export default function BookingModal({ isOpen, onClose, lang, contact, varieties
     const text = encodeURIComponent(
       lang === 'mr'
         ? `*नवीन रोप बुकिंग / चौकशी (श्रीनाथ ॲग्रीटेक)*\n\n👤 नाव: ${formData.name}\n📱 मोबाईल: ${formData.phone}\n📍 गाव/पत्ता: ${formData.location}\n🌱 पीक: ${formData.crop}\n📦 संख्या: ${formData.quantity}\n📅 तारीख: ${formData.date || 'लवकरात लवकर'}\n\nकृपया दर व बुकिंग उपलब्धतेची माहिती द्या.`
-        : `*Seedling Booking Inquiry (Shreenath Agritech)*\n\n👤 Name: ${formData.name}\n📱 Phone: ${formData.phone}\n📍 Location: ${formData.location}\n🌱 Crop: ${formData.crop}\n📦 Quantity: ${formData.quantity}\n📅 Date: ${formData.date || 'Earliest'}\n\nPlease confirm availability and wholesale rate.`
+        : `*Seedling Booking Inquiry (Shrinath Agritech)*\n\n👤 Name: ${formData.name}\n📱 Phone: ${formData.phone}\n📍 Location: ${formData.location}\n🌱 Crop: ${formData.crop}\n📦 Quantity: ${formData.quantity}\n📅 Date: ${formData.date || 'Earliest'}\n\nPlease confirm availability and wholesale rate.`
     );
 
     window.open(`https://wa.me/${contact.whatsapp}?text=${text}`, '_blank');
@@ -40,7 +40,7 @@ export default function BookingModal({ isOpen, onClose, lang, contact, varieties
                 {lang === 'mr' ? 'आगाऊ रोप बुकिंग' : 'Seedling Booking Request'}
               </h3>
               <p className="text-xs text-emerald-200">
-                {lang === 'mr' ? 'श्रीनाथ ॲग्रीटेक • सटाणा (नाशिक)' : 'Shreenath Agritech • Satana (Nashik)'}
+                {lang === 'mr' ? 'श्रीनाथ ॲग्रीटेक • सटाणा (नाशिक)' : 'Shrinath Agritech • Satana (Nashik)'}
               </p>
             </div>
           </div>

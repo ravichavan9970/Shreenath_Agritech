@@ -20,7 +20,7 @@ export default function BookingSection({ lang, contact, varieties }) {
     const text = encodeURIComponent(
       lang === 'mr'
         ? `*नवीन रोप बुकिंग / चौकशी (श्रीनाथ ॲग्रीटेक)*\n\n👤 शेतकऱ्याचे नाव: ${formData.name || 'शेतकरी बांधव'}\n📱 मोबाईल: ${formData.phone || 'उपलब्ध नाही'}\n📍 गाव/पत्ता: ${formData.location || 'महाराष्ट्र'}\n🌱 पीक व वाण: ${formData.crop}\n📦 रोपांची संख्या: ${formData.quantity}\n📅 लागवड तारीख: ${formData.date || 'लवकरात लवकर'}\n📝 इतर सूचना: ${formData.notes || 'काही नाही'}\n\nकृपया बुकिंग खात्री करून चालू दर सांगावेत.`
-        : `*New Seedling Booking Request (Shreenath Agritech)*\n\n👤 Farmer Name: ${formData.name || 'Not provided'}\n📱 Phone: ${formData.phone || 'Not provided'}\n📍 Village/Location: ${formData.location || 'Maharashtra'}\n🌱 Crop: ${formData.crop}\n📦 Quantity: ${formData.quantity}\n📅 Expected Date: ${formData.date || 'Earliest'}\n📝 Notes: ${formData.notes || 'None'}\n\nPlease confirm availability and share final pricing.`
+        : `*New Seedling Booking Request (Shrinath Agritech)*\n\n👤 Farmer Name: ${formData.name || 'Not provided'}\n📱 Phone: ${formData.phone || 'Not provided'}\n📍 Village/Location: ${formData.location || 'Maharashtra'}\n🌱 Crop: ${formData.crop}\n📦 Quantity: ${formData.quantity}\n📅 Expected Date: ${formData.date || 'Earliest'}\n📝 Notes: ${formData.notes || 'None'}\n\nPlease confirm availability and share final pricing.`
     );
 
     window.open(`https://wa.me/${contact.whatsapp}?text=${text}`, '_blank');
@@ -104,7 +104,7 @@ export default function BookingSection({ lang, contact, varieties }) {
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-tight">
                 {lang === 'mr'
                   ? 'श्रीनाथ ॲग्रीटेकसोबत तुमच्या शेतीचा विकास करा!'
-                  : 'Cultivate High Profits With Shreenath Agritech!'}
+                  : 'Cultivate High Profits With Shrinath Agritech!'}
               </h3>
               <p className="text-emerald-100/90 text-sm leading-relaxed">
                 {lang === 'mr'

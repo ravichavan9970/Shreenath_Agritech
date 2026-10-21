@@ -72,7 +72,7 @@ export default function PlantCalculator({ lang, contact }) {
   const waMessage = encodeURIComponent(
     lang === 'mr'
       ? `नमस्कार श्रीनाथ ॲग्रीटेक,\nमी वेबसाईटवरील रोप गणकयंत्र पाहिले. मला खालील रोपांची चौकशी करायची आहे:\n\n🌱 पीक: ${selectedCrop.name.mr}\n📐 क्षेत्र: ${getAreaText()}\n📦 अंदाजे लागणारी रोपे: ${totalSeedlings.toLocaleString()} रोपे\n\nकृपया चालू दर आणि बुकिंग उपलब्ध तारीख सांगावी.`
-      : `Hello Shreenath Agritech,\nI checked the Seedling Calculator on your website. I want to inquire about:\n\n🌱 Crop: ${selectedCrop.name.en}\n📐 Area: ${getAreaText()}\n📦 Seedlings Needed: ~${totalSeedlings.toLocaleString()} plants\n\nPlease share current pricing and delivery date.`
+      : `Hello Shrinath Agritech,\nI checked the Seedling Calculator on your website. I want to inquire about:\n\n🌱 Crop: ${selectedCrop.name.en}\n📐 Area: ${getAreaText()}\n📦 Seedlings Needed: ~${totalSeedlings.toLocaleString()} plants\n\nPlease share current pricing and delivery date.`
   );
 
   return (

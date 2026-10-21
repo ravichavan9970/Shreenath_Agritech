@@ -53,7 +53,7 @@ export default function NurseryTech({ lang }) {
             {lang === 'mr' ? '⭐ आमची खासियत' : '⭐ Our Strengths'}
           </div>
           <h2 className="text-2xl sm:text-4xl font-black text-stone-900 tracking-tight">
-            {lang === 'mr' ? 'श्रीनाथ ॲग्रीटेकची रोपे का निवडावीत?' : 'Why Choose Shreenath Agritech Seedlings?'}
+            {lang === 'mr' ? 'श्रीनाथ ॲग्रीटेकची रोपे का निवडावीत?' : 'Why Choose Shrinath Agritech Seedlings?'}
           </h2>
           <p className="text-stone-600 mt-2 text-sm sm:text-base font-medium">
             {lang === 'mr'

@@ -1,6 +1,6 @@
-# श्रीनाथ ॲग्रीटेक (Shreenath Agritech) - अधिकृत आधुनिक वेबसाईट
+# श्रीनाथ ॲग्रीटेक (Shrinath Agritech) - अधिकृत आधुनिक वेबसाईट
 
-तुमची विश्वासार्ह होलसेल भाजीपाला रोप नर्सरी | Asthane, Malegaon, Dist. Nashik, Maharashtra
+तुमची विश्वासार्ह होलसेल भाजीपाला रोप नर्सरी | Satana-Kalwan Road, Malharwadi, Munjwad, Satana, Dist. Nashik, Maharashtra 423301
 
 ---
 

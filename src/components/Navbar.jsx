@@ -28,7 +28,7 @@ export default function Navbar({ lang, contact, onOpenBookingModal }) {
             <div>
               <div className="flex items-baseline gap-1">
                 <span className="text-xl sm:text-2xl font-black text-stone-900 tracking-tight">
-                  {lang === 'mr' ? 'श्रीनाथ ॲग्रीटेक' : 'Shreenath Agritech'}
+                  {lang === 'mr' ? 'श्रीनाथ ॲग्रीटेक' : 'Shrinath Agritech'}
                 </span>
               </div>
               <p className="text-xs sm:text-xs font-bold text-emerald-800">
@@ -64,7 +64,7 @@ export default function Navbar({ lang, contact, onOpenBookingModal }) {
               href={`https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(
                 lang === 'mr'
                   ? 'नमस्कार श्रीनाथ ॲग्रीटेक, मला भाजीपाला रोपांची चौकशी करायची आहे.'
-                  : 'Hello Shreenath Agritech, I want to inquire about vegetable seedlings.'
+                  : 'Hello Shrinath Agritech, I want to inquire about vegetable seedlings.'
               )}`}
               target="_blank"
               rel="noreferrer"
@@ -116,7 +116,7 @@ export default function Navbar({ lang, contact, onOpenBookingModal }) {
                 href={`https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(
                   lang === 'mr'
                     ? 'नमस्कार श्रीनाथ ॲग्रीटेक, मला रोपांची चौकशी करायची आहे.'
-                    : 'Hello Shreenath Agritech, I want to inquire about seedlings.'
+                    : 'Hello Shrinath Agritech, I want to inquire about seedlings.'
                 )}`}
                 target="_blank"
                 rel="noreferrer"

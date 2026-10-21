@@ -18,7 +18,7 @@ export default function ContactSection({ lang, contact }) {
               </div>
               <div>
                 <h3 className="text-2xl font-black text-white">
-                  {lang === 'mr' ? 'श्रीनाथ ॲग्रीटेक' : 'Shreenath Agritech'}
+                  {lang === 'mr' ? 'श्रीनाथ ॲग्रीटेक' : 'Shrinath Agritech'}
                 </h3>
                 <p className="text-xs font-bold text-emerald-400">
                   {lang === 'mr' ? 'होलसेल भाजीपाला रोप नर्सरी' : 'Wholesale Vegetable Seedling Nursery'}
@@ -78,7 +78,7 @@ export default function ContactSection({ lang, contact }) {
                 href={`https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(
                   lang === 'mr'
                     ? 'नमस्कार श्रीनाथ ॲग्रीटेक, मला भाजीपाला रोपांची चौकशी करायची आहे.'
-                    : 'Hello Shreenath Agritech, I want to inquire about vegetable seedlings.'
+                    : 'Hello Shrinath Agritech, I want to inquire about vegetable seedlings.'
                 )}`}
                 target="_blank"
                 rel="noreferrer"
@@ -109,7 +109,7 @@ export default function ContactSection({ lang, contact }) {
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Shreenath Agritech Nursery Satana Kalwan Road"
+                title="Shrinath Agritech Nursery Satana Kalwan Road"
               ></iframe>
               <div className="absolute top-2.5 left-2.5 bg-stone-900/90 backdrop-blur-xs text-white text-[11px] sm:text-xs font-bold px-2.5 py-1 rounded-lg border border-stone-700 flex items-center gap-1.5 shadow-md pointer-events-none">
                 <MapPin className="w-3.5 h-3.5 text-amber-400 shrink-0" />
@@ -143,7 +143,7 @@ export default function ContactSection({ lang, contact }) {
 
         {/* Footer Bottom */}
         <div className="pt-6 text-center text-xs text-stone-500 font-semibold">
-          <p>© {new Date().getFullYear()} श्रीनाथ ॲग्रीटेक (Shreenath Agritech) • सटाणा-कळवण रोड, मल्हारवाडी, मुंजवाड, ता. सटाणा, जि. नाशिक - ४२३३०१.</p>
+          <p>© {new Date().getFullYear()} श्रीनाथ ॲग्रीटेक (Shrinath Agritech) • सटाणा-कळवण रोड, मल्हारवाडी, मुंजवाड, ता. सटाणा, जि. नाशिक - ४२३३०१.</p>
           <p className="mt-1 text-emerald-600 font-bold">शेतकऱ्यांच्या सेवेत तत्पर!</p>
         </div>
       </div>

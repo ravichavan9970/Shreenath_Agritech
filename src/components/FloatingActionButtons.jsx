@@ -5,7 +5,7 @@ export default function FloatingActionButtons({ lang, contact }) {
   const waText = encodeURIComponent(
     lang === 'mr'
       ? 'नमस्कार श्रीनाथ ॲग्रीटेक, मला भाजीपाला रोपांचे दर व माहिती हवी आहे.'
-      : 'Hello Shreenath Agritech, I would like to know seedling availability and rates.'
+      : 'Hello Shrinath Agritech, I would like to know seedling availability and rates.'
   );
 
   return (

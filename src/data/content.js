@@ -300,7 +300,7 @@ export const siteData = {
       crop: { mr: "टोमॅटो (योगी व ६२४२) आणि टरबूज", en: "Tomato (Yogi & 6242) and Watermelon" },
       quote: {
         mr: "श्रीनाथ ॲग्रीटेकची रोपे वापरल्यामुळे माझ्या भाजीपाला उत्पादनात लक्षणीय वाढ झाली. त्यांची गुणवत्ता आणि सेवा दोन्ही उत्कृष्ट आहेत! रोपांचे हार्डनिंग उत्तम असल्याने उन्हातही एकही रोप वाया गेले नाही.",
-        en: "Using Shreenath Agritech seedlings significantly boosted my vegetable yield. Both their seedling quality and customer service are outstanding! Hardened seedlings ensured zero mortality even in harsh sun."
+        en: "Using Shrinath Agritech seedlings significantly boosted my vegetable yield. Both their seedling quality and customer service are outstanding! Hardened seedlings ensured zero mortality even in harsh sun."
       },
       rating: 5,
       verified: true
@@ -312,7 +312,7 @@ export const siteData = {
       crop: { mr: "पत्ता कोबी (वीर ३३३) व फ्लॉवर", en: "Cabbage (Veer 333) & Cauliflower" },
       quote: {
         mr: "श्रीनाथ ॲग्रीटेककडून मी १०,००० कोबी रोपे घेतली होती. सर्व रोपे एकाच आकाराची आणि निरोगी होती. वजनदार गट्टे तयार झाले आणि बाजारात चांगला नफा मिळाला. डिलिव्हरी वेळेवर बांधावर मिळाली.",
-        en: "I purchased 10,000 cabbage seedlings from Shreenath Agritech. Every tray was uniform and disease-free. The heads were extremely heavy and fetched premium rates at the mandi. On-time delivery right at the farm!"
+        en: "I purchased 10,000 cabbage seedlings from Shrinath Agritech. Every tray was uniform and disease-free. The heads were extremely heavy and fetched premium rates at the mandi. On-time delivery right at the farm!"
       },
       rating: 5,
       verified: true
@@ -324,7 +324,7 @@ export const siteData = {
       crop: { mr: "पपई तैवान ७८६", en: "Papaya Taiwan 786" },
       quote: {
         mr: "पपईच्या तैवान ७८६ च्या रोपांसाठी श्रीनाथ ॲग्रीटेक नाशिक जिल्ह्यातील सर्वोत्तम नर्सरी आहे. सर्व रोपे ओरिजिनल तैवान ७८६ असून आज झाडांना घसघशीत फळे लागली आहेत. खूप खूप धन्यवाद!",
-        en: "For genuine Papaya Taiwan 786 seedlings, Shreenath Agritech is undoubtedly the finest nursery in Nashik district. Every plant is authentic and loaded with heavy fruit. Highly recommended!"
+        en: "For genuine Papaya Taiwan 786 seedlings, Shrinath Agritech is undoubtedly the finest nursery in Nashik district. Every plant is authentic and loaded with heavy fruit. Highly recommended!"
       },
       rating: 5,
       verified: true
@@ -365,7 +365,7 @@ export const siteData = {
     {
       q: {
         mr: "श्रीनाथ ॲग्रीटेकच्या रोपांचे वैशिष्ट्य काय आहे?",
-        en: "What makes Shreenath Agritech seedlings superior?"
+        en: "What makes Shrinath Agritech seedlings superior?"
       },
       a: {
         mr: "आमच्या हायटेक पॉलीहाऊसमध्ये निर्जंतुक कोकोपीट, प्रमाणित हायब्रीड बियाणे आणि मायक्रो-क्लायमेट नियंत्रणाखाली रोपे तयार केली जातात. शेतात नेण्यापूर्वी त्यांचे योग्य हार्डनिंग केले जाते, ज्यामुळे शेतात लावल्यावर रोपे सुकून मरत नाहीत (Mortality ०-१% पेक्षा कमी).",

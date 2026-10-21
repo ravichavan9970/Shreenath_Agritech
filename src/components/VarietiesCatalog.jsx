@@ -52,7 +52,7 @@ export default function VarietiesCatalog({ lang, contact, varieties, onSelectVar
             const waMessage = encodeURIComponent(
               lang === 'mr'
                 ? `नमस्कार श्रीनाथ ॲग्रीटेक,\nमला *${v.name.mr}* या रोपांचे दर व बुकिंग करायचे आहे.\nकृपया चालू दर आणि उपलब्ध तारीख सांगा.`
-                : `Hello Shreenath Agritech,\nI want to book *${v.name.en}* seedlings.\nPlease share pricing and delivery schedule.`
+                : `Hello Shrinath Agritech,\nI want to book *${v.name.en}* seedlings.\nPlease share pricing and delivery schedule.`
             );
 
             return (

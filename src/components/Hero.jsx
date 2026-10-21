@@ -50,7 +50,7 @@ export default function Hero({ lang, contact, onOpenBookingModal }) {
                 href={`https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(
                   lang === 'mr'
                     ? 'नमस्कार श्रीनाथ ॲग्रीटेक, मला भाजीपाला रोपांची माहिती व दर सांगा.'
-                    : 'Hello Shreenath Agritech, please share seedling availability and pricing.'
+                    : 'Hello Shrinath Agritech, please share seedling availability and pricing.'
                 )}`}
                 target="_blank"
                 rel="noreferrer"
@@ -115,7 +115,7 @@ export default function Hero({ lang, contact, onOpenBookingModal }) {
                   <p className="text-base sm:text-lg font-black leading-tight">
                     {lang === 'mr'
                       ? 'श्रीनाथ ॲग्रीटेक हायटेक नर्सरी'
-                      : 'Shreenath Agritech Hi-Tech Polyhouse'}
+                      : 'Shrinath Agritech Hi-Tech Polyhouse'}
                   </p>
                   <p className="text-xs text-emerald-300 font-semibold mt-0.5">
                     {lang === 'mr' ? 'सटाणा-कळवण रोड, मल्हारवाडी, मुंजवाड (ता. सटाणा)' : 'Satana-Kalwan Rd, Malharwadi, Satana'}
