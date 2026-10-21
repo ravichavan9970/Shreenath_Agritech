@@ -16,25 +16,14 @@ export default function Navbar({ lang, contact, onOpenBookingModal }) {
     <header className="sticky top-0 z-40 bg-white/98 backdrop-blur-md border-b border-stone-200 shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 sm:h-20">
-          {/* Logo & Name */}
-          <a href="#" className="flex items-center gap-3">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl overflow-hidden bg-stone-950 shadow-md border border-stone-200 shrink-0 flex items-center justify-center p-0.5">
-              <img
-                src={contact.logo || "/images/logo.jpg"}
-                alt="श्रीनाथ ॲग्रीटेक लोगो"
-                className="w-full h-full object-cover rounded-xl"
-              />
-            </div>
-            <div>
-              <div className="flex items-baseline gap-1">
-                <span className="text-xl sm:text-2xl font-black text-stone-900 tracking-tight">
-                  {lang === 'mr' ? 'श्रीनाथ ॲग्रीटेक' : 'Shrinath Agritech'}
-                </span>
-              </div>
-              <p className="text-xs sm:text-xs font-bold text-emerald-800">
-                {lang === 'mr' ? 'होलसेल भाजीपाला रोप नर्सरी • सटाणा (नाशिक)' : 'Wholesale Vegetable Seedling Nursery • Satana'}
-              </p>
-            </div>
+          {/* Brand Name */}
+          <a href="#" className="flex flex-col justify-center py-1">
+            <span className="text-2xl sm:text-3xl font-black text-stone-900 tracking-tight leading-tight">
+              {lang === 'mr' ? 'श्रीनाथ ॲग्रीटेक' : 'Shrinath Agritech'}
+            </span>
+            <p className="text-xs sm:text-xs font-bold text-emerald-800">
+              {lang === 'mr' ? 'होलसेल भाजीपाला रोप नर्सरी • सटाणा (नाशिक)' : 'Wholesale Vegetable Seedling Nursery • Satana'}
+            </p>
           </a>
 
           {/* Desktop Navigation */}
