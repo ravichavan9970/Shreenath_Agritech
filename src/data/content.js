@@ -7,11 +7,11 @@ export const siteData = {
     whatsappLink: "https://wa.me/919604983818",
     email: "shrinathagritech2024@gmail.com",
     address: {
-      mr: "मु. पो. अस्थाने, ता. मालेगाव, जि. नाशिक, महाराष्ट्र - ४२३२०४",
-      en: "At Post Asthane, Taluka Malegaon, Dist. Nashik, Maharashtra - 423204"
+      mr: "श्रीनाथ ॲग्रीटेक, सटाणा-कळवण रोड, मल्हारवाडी, मुंजवाड, ता. सटाणा, जि. नाशिक, महाराष्ट्र - ४२३३०१",
+      en: "Shrinath Agritech, Satana-Kalwan Road, Malharwadi, Munjwad Tq, Satana, Dist. Nashik, Maharashtra - 423301"
     },
     googleMapsLink: "https://goo.gl/maps/uourzdP5nz3txvgu7?g_st=aw",
-    googleMapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119747.88147610411!2d74.45398248883656!3d20.551717208889246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bde452fcf3e6397%3A0xe968b54e7d9b93b!2sAsthane%2C%20Maharashtra%20423204!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+    googleMapsEmbed: "https://maps.google.com/maps?q=Shrinath+Agritech,+Satana-Kalwan+Road,+Malharwadi,+Munjwad,+Satana,+Maharashtra+423301&t=&z=15&ie=UTF8&iwloc=&output=embed",
     workingHours: {
       mr: "सोमवार ते रविवार: सकाळी ७:०० ते रात्री ८:००",
       en: "Monday to Sunday: 7:00 AM to 8:00 PM"
@@ -295,7 +295,7 @@ export const siteData = {
     {
       name: "रोहित ठोके",
       role: { mr: "प्रगतिशील शेतकरी", en: "Progressive Farmer" },
-      village: { mr: "मालेगाव, अस्थाने (जि. नाशिक)", en: "Asthane, Malegaon (Nashik)" },
+      village: { mr: "सटाणा / कळवण (जि. नाशिक)", en: "Satana / Kalwan (Nashik)" },
       crop: { mr: "टोमॅटो (योगी व ६२४२) आणि टरबूज", en: "Tomato (Yogi & 6242) and Watermelon" },
       quote: {
         mr: "श्रीनाथ ॲग्रीटेकची रोपे वापरल्यामुळे माझ्या भाजीपाला उत्पादनात लक्षणीय वाढ झाली. त्यांची गुणवत्ता आणि सेवा दोन्ही उत्कृष्ट आहेत! रोपांचे हार्डनिंग उत्तम असल्याने उन्हातही एकही रोप वाया गेले नाही.",

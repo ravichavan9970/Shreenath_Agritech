@@ -12,8 +12,8 @@ export default function TopBar({ lang, setLang, contact }) {
           </span>
           <span className="font-semibold hidden sm:inline">
             {lang === 'mr'
-              ? 'भाजीपाला रोपांचे आगाऊ बुकिंग सुरू आहे • अस्थाने, मालेगाव (नाशिक)'
-              : 'Advance vegetable seedling bookings open • Asthane, Malegaon (Nashik)'}
+              ? 'भाजीपाला रोपांचे आगाऊ बुकिंग सुरू आहे • सटाणा-कळवण रोड (नाशिक)'
+              : 'Advance vegetable seedling bookings open • Satana-Kalwan Rd (Nashik)'}
           </span>
           <span className="font-semibold sm:hidden">
             {lang === 'mr' ? 'रोपांचे बुकिंग सुरू आहे' : 'Bookings open'}
@@ -29,7 +29,7 @@ export default function TopBar({ lang, setLang, contact }) {
             className="hidden md:flex items-center gap-1 text-emerald-200 hover:text-white font-semibold text-xs transition"
           >
             <MapPin className="w-3.5 h-3.5 text-amber-400" />
-            <span>{lang === 'mr' ? 'अस्थाने, मालेगाव' : 'Asthane, Malegaon'}</span>
+            <span>{lang === 'mr' ? 'सटाणा-कळवण रोड, सटाणा' : 'Satana-Kalwan Rd, Satana'}</span>
           </a>
 
           <a

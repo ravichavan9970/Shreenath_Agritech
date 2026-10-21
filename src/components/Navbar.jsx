@@ -32,7 +32,7 @@ export default function Navbar({ lang, contact, onOpenBookingModal }) {
                 </span>
               </div>
               <p className="text-xs sm:text-xs font-bold text-emerald-800">
-                {lang === 'mr' ? 'होलसेल भाजीपाला रोप नर्सरी • मालेगाव' : 'Wholesale Vegetable Seedling Nursery'}
+                {lang === 'mr' ? 'होलसेल भाजीपाला रोप नर्सरी • सटाणा (नाशिक)' : 'Wholesale Vegetable Seedling Nursery • Satana'}
               </p>
             </div>
           </a>

@@ -21,7 +21,7 @@ export default function Gallery({ lang, images }) {
           </h2>
           <p className="text-stone-600 mt-2 text-sm sm:text-base font-medium">
             {lang === 'mr'
-              ? 'अस्थाने (मालेगाव) येथील नर्सरीमधील रोपे, पांढरी मुळे आणि सुरक्षित वाहनांचे फोटो.'
+              ? 'सटाणा-कळवण रोड येथील नर्सरीमधील रोपे, पांढरी मुळे आणि सुरक्षित वाहनांचे फोटो.'
               : 'Authentic pictures of seedling trays, strong white root balls and dispatch.'}
           </p>
         </div>

@@ -40,7 +40,7 @@ export default function BookingModal({ isOpen, onClose, lang, contact, varieties
                 {lang === 'mr' ? 'आगाऊ रोप बुकिंग' : 'Seedling Booking Request'}
               </h3>
               <p className="text-xs text-emerald-200">
-                {lang === 'mr' ? 'श्रीनाथ ॲग्रीटेक • अस्थाने (मालेगाव)' : 'Shreenath Agritech • Malegaon (Nashik)'}
+                {lang === 'mr' ? 'श्रीनाथ ॲग्रीटेक • सटाणा (नाशिक)' : 'Shreenath Agritech • Satana (Nashik)'}
               </p>
             </div>
           </div>
@@ -92,7 +92,7 @@ export default function BookingModal({ isOpen, onClose, lang, contact, varieties
                 required
                 value={formData.location}
                 onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                placeholder={lang === 'mr' ? 'उदा. मालेगाव' : 'e.g. Malegaon'}
+                placeholder={lang === 'mr' ? 'उदा. सटाणा / मालेगाव' : 'e.g. Satana / Malegaon'}
                 className="w-full bg-stone-50 border border-stone-300 rounded-xl px-3.5 py-2.5 font-medium focus:ring-2 focus:ring-emerald-600 focus:outline-none"
               />
             </div>

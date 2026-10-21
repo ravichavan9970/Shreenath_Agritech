@@ -15,7 +15,7 @@ export default function Testimonials({ lang, testimonials }) {
           </h2>
           <p className="text-stone-600 mt-1 text-sm sm:text-base font-medium">
             {lang === 'mr'
-              ? 'नाशिक व मालेगाव परिसरातील शेतकऱ्यांचे खरे अनुभव.'
+              ? 'नाशिक, सटाणा, कळवण व मालेगाव परिसरातील शेतकऱ्यांचे खरे अनुभव.'
               : 'Real feedback from progressive farmers who planted our seedlings.'}
           </p>
         </div>

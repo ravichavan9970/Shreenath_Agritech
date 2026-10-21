@@ -109,7 +109,7 @@ export default function ContactSection({ lang, contact }) {
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Shreenath Agritech Nursery Asthane Malegaon"
+                title="Shreenath Agritech Nursery Satana Kalwan Road"
               ></iframe>
             </div>
             <a
@@ -119,14 +119,14 @@ export default function ContactSection({ lang, contact }) {
               className="flex items-center justify-center gap-2 bg-stone-800 hover:bg-stone-700 text-emerald-300 border border-stone-700 p-3 rounded-xl font-bold text-xs sm:text-sm transition"
             >
               <Navigation className="w-4 h-4 text-emerald-400" />
-              <span>{lang === 'mr' ? '📍 थेट गुगल मॅप्स उघडा (https://goo.gl/maps/uourzdP5nz3txvgu7)' : '📍 Open Location in Google Maps (https://goo.gl/maps/uourzdP5nz3txvgu7)'}</span>
+              <span>{lang === 'mr' ? '📍 थेट गुगल मॅप्स उघडा' : '📍 Open in Google Maps'}</span>
             </a>
           </div>
         </div>
 
         {/* Footer Bottom */}
         <div className="pt-6 text-center text-xs text-stone-500 font-semibold">
-          <p>© {new Date().getFullYear()} श्रीनाथ ॲग्रीटेक (Shreenath Agritech) • अस्थाने, ता. मालेगाव, जि. नाशिक.</p>
+          <p>© {new Date().getFullYear()} श्रीनाथ ॲग्रीटेक (Shreenath Agritech) • सटाणा-कळवण रोड, मल्हारवाडी, मुंजवाड, ता. सटाणा, जि. नाशिक - ४२३३०१.</p>
           <p className="mt-1 text-emerald-600 font-bold">शेतकऱ्यांच्या सेवेत तत्पर!</p>
         </div>
       </div>

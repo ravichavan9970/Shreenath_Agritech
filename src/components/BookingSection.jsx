@@ -184,7 +184,7 @@ export default function BookingSection({ lang, contact, varieties }) {
                       required
                       value={formData.location}
                       onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                      placeholder={lang === 'mr' ? 'उदा. मालेगाव, नाशिक' : 'e.g. Malegaon, Nashik'}
+                      placeholder={lang === 'mr' ? 'उदा. सटाणा / मालेगाव / कळवण' : 'e.g. Satana, Malegaon, Kalwan'}
                       className="w-full bg-stone-50 border border-stone-300 rounded-xl px-3.5 py-2.5 font-medium focus:ring-2 focus:ring-emerald-600 focus:outline-none"
                     />
                   </div>

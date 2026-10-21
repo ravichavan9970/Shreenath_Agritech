@@ -118,7 +118,7 @@ export default function Hero({ lang, contact, onOpenBookingModal }) {
                       : 'Shreenath Agritech Hi-Tech Polyhouse'}
                   </p>
                   <p className="text-xs text-emerald-300 font-semibold mt-0.5">
-                    {lang === 'mr' ? 'मु. पो. अस्थाने, ता. मालेगाव (जि. नाशिक)' : 'Asthane, Malegaon (Nashik)'}
+                    {lang === 'mr' ? 'सटाणा-कळवण रोड, मल्हारवाडी, मुंजवाड (ता. सटाणा)' : 'Satana-Kalwan Rd, Malharwadi, Satana'}
                   </p>
                 </div>
               </div>
