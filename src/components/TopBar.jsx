@@ -23,13 +23,15 @@ export default function TopBar({ lang, setLang, contact }) {
         {/* Right: Location, Phone & Simple Language Button */}
         <div className="flex items-center gap-3 sm:gap-4">
           <a
-            href={contact.googleMapsLink || "https://goo.gl/maps/uourzdP5nz3txvgu7?g_st=aw"}
+            href={contact.googleMapsLink}
             target="_blank"
-            rel="noreferrer"
-            className="hidden md:flex items-center gap-1 text-emerald-200 hover:text-white font-semibold text-xs transition"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 text-emerald-200 hover:text-white hover:underline font-semibold text-xs transition cursor-pointer"
+            title={lang === 'mr' ? 'गुगल मॅप्सवर लोकेशन उघडा' : 'Open Location in Google Maps'}
           >
-            <MapPin className="w-3.5 h-3.5 text-amber-400" />
-            <span>{lang === 'mr' ? 'सटाणा-कळवण रोड, सटाणा' : 'Satana-Kalwan Rd, Satana'}</span>
+            <MapPin className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+            <span className="hidden md:inline">{lang === 'mr' ? 'सटाणा-कळवण रोड, सटाणा' : 'Satana-Kalwan Rd, Satana'}</span>
+            <span className="md:hidden">{lang === 'mr' ? 'सटाणा' : 'Satana'}</span>
           </a>
 
           <a

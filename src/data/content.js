@@ -10,8 +10,9 @@ export const siteData = {
       mr: "श्रीनाथ ॲग्रीटेक, सटाणा-कळवण रोड, मल्हारवाडी, मुंजवाड, ता. सटाणा, जि. नाशिक, महाराष्ट्र - ४२३३०१",
       en: "Shrinath Agritech, Satana-Kalwan Road, Malharwadi, Munjwad Tq, Satana, Dist. Nashik, Maharashtra - 423301"
     },
-    googleMapsLink: "https://goo.gl/maps/uourzdP5nz3txvgu7?g_st=aw",
-    googleMapsEmbed: "https://maps.google.com/maps?q=Shrinath+Agritech,+Satana-Kalwan+Road,+Malharwadi,+Munjwad,+Satana,+Maharashtra+423301&t=&z=15&ie=UTF8&iwloc=&output=embed",
+    googleMapsLink: "https://www.google.com/maps/search/?api=1&query=Shrinath+Agritech,+Satana-Kalwan+Road,+Malharwadi,+Munjwad,+Satana,+Maharashtra+423301",
+    googleMapsDirections: "https://www.google.com/maps/dir/?api=1&destination=Shrinath+Agritech,+Satana-Kalwan+Road,+Malharwadi,+Munjwad,+Satana,+Maharashtra+423301",
+    googleMapsEmbed: "https://www.openstreetmap.org/export/embed.html?bbox=74.1500%2C20.5750%2C74.2250%2C20.6150&layer=mapnik&marker=20.5984%2C74.1811",
     workingHours: {
       mr: "सोमवार ते रविवार: सकाळी ७:०० ते रात्री ८:००",
       en: "Monday to Sunday: 7:00 AM to 8:00 PM"
