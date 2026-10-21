@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import TopBar from './components/TopBar';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import VarietiesCatalog from './components/VarietiesCatalog';
@@ -15,16 +14,10 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-stone-50 font-['Mukta',_'Plus_Jakarta_Sans',_sans-serif] text-stone-900 flex flex-col antialiased">
-      {/* 1. Top Bar */}
-      <TopBar
-        lang={lang}
-        setLang={setLang}
-        contact={siteData.contact}
-      />
-
-      {/* 2. Simple Navigation Header */}
+      {/* Navigation Header */}
       <Navbar
         lang={lang}
+        setLang={setLang}
         contact={siteData.contact}
       />
 

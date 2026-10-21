@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Phone, MessageCircle, Menu, X, Sprout } from 'lucide-react';
+import { Phone, MessageCircle, Menu, X, Sprout, Globe } from 'lucide-react';
 
-export default function Navbar({ lang, contact, onOpenBookingModal }) {
+export default function Navbar({ lang, setLang, contact, onOpenBookingModal }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
@@ -50,11 +50,22 @@ export default function Navbar({ lang, contact, onOpenBookingModal }) {
             ))}
           </nav>
 
-          {/* Desktop Direct Call & WhatsApp Buttons */}
+          {/* Desktop Direct Call & WhatsApp Buttons + Language Switcher */}
           <div className="hidden sm:flex items-center gap-2.5">
+            {setLang && (
+              <button
+                onClick={() => setLang(lang === 'mr' ? 'en' : 'mr')}
+                className="flex items-center gap-1.5 bg-stone-100 hover:bg-stone-200 text-stone-800 px-3.5 py-2.5 rounded-xl text-xs font-bold transition border border-stone-300 cursor-pointer shadow-2xs"
+                title="भाषा बदला / Change Language"
+              >
+                <Globe className="w-4 h-4 text-emerald-700" />
+                <span>{lang === 'mr' ? 'English' : 'मराठी'}</span>
+              </button>
+            )}
+
             <a
               href={`tel:${contact.phone}`}
-              className="flex items-center gap-1.5 bg-stone-100 hover:bg-stone-200 text-stone-900 px-4 py-2.5 rounded-xl font-bold text-sm border border-stone-300 transition"
+              className="flex items-center gap-1.5 bg-stone-100 hover:bg-stone-200 text-stone-900 px-4 py-2.5 rounded-xl font-bold text-sm border border-stone-300 transition cursor-pointer shadow-2xs"
               title={lang === 'mr' ? `कॉल करा: ${contact.phoneDisplay}` : `Call: ${contact.phoneDisplay}`}
             >
               <Phone className="w-4 h-4 text-emerald-600" />
@@ -76,8 +87,19 @@ export default function Navbar({ lang, contact, onOpenBookingModal }) {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Right: Lang + Call + Menu Button */}
           <div className="flex lg:hidden items-center gap-2">
+            {setLang && (
+              <button
+                onClick={() => setLang(lang === 'mr' ? 'en' : 'mr')}
+                className="flex items-center gap-1 bg-stone-100 hover:bg-stone-200 text-stone-800 px-2.5 py-2 rounded-xl text-xs font-bold border border-stone-300 cursor-pointer"
+                title="भाषा बदला / Change Language"
+              >
+                <Globe className="w-3.5 h-3.5 text-emerald-700" />
+                <span>{lang === 'mr' ? 'EN' : 'मराठी'}</span>
+              </button>
+            )}
+
             <a
               href={`tel:${contact.phone}`}
               className="sm:hidden p-2 rounded-xl bg-stone-100 text-stone-900 border border-stone-300"
