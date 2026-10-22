@@ -14,8 +14,8 @@ export const siteData = {
     googleMapsDirections: "https://www.google.com/maps/dir/?api=1&destination=Shrinath+Agritech,+Satana-Kalwan+Road,+Malharwadi,+Munjwad,+Satana,+Maharashtra+423301",
     googleMapsEmbed: "https://www.openstreetmap.org/export/embed.html?bbox=74.1500%2C20.5750%2C74.2250%2C20.6150&layer=mapnik&marker=20.5984%2C74.1811",
     workingHours: {
-      mr: "सोमवार ते रविवार: सकाळी ९:०० ते संध्याकाळी ६:००",
-      en: "Monday to Sunday: 9:00 AM to 6:00 PM"
+      mr: "रविवार ते शुक्रवार: सकाळी ९:०० ते संध्याकाळी ६:०० (शनिवार बंद)",
+      en: "Sunday to Friday: 9:00 AM to 6:00 PM (Saturday Closed)"
     }
   },
 

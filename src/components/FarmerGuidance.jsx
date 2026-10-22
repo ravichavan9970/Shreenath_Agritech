@@ -134,7 +134,7 @@ export default function FarmerGuidance({ lang, contact }) {
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>{lang === 'mr' ? 'सकाळी ९:०० ते संध्याकाळी ६:०० सतत उपलब्ध' : 'Available 9:00 AM to 6:00 PM Daily'}</span>
+                  <span>{lang === 'mr' ? 'सकाळी ९:०० ते संध्याकाळी ६:०० उपलब्ध (शनिवार बंद)' : 'Available 9:00 AM to 6:00 PM (Saturday Closed)'}</span>
                 </div>
               </div>
             </div>
