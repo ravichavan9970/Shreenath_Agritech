@@ -22,16 +22,16 @@ export default function Hero({ lang, contact, onOpenBookingModal }) {
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-stone-900 tracking-tight leading-tight">
               {lang === 'mr' ? (
                 <>
-                  दर्जेदार व निरोगी भाजीपाला रोपे,{' '}
+                  निरोगी रोपे, भरघोस उत्पादन,{' '}
                   <span className="text-emerald-700 underline decoration-amber-400 decoration-4">
-                    थेट बांधापर्यंत!
+                    समृद्ध शेतकरी!
                   </span>
                 </>
               ) : (
                 <>
-                  Healthy Vegetable Seedlings,{' '}
+                  Healthy Seedlings, Bumper Harvest,{' '}
                   <span className="text-emerald-700 underline decoration-amber-400 decoration-4">
-                    Direct to Your Farm!
+                    Prosperous Farmers!
                   </span>
                 </>
               )}
