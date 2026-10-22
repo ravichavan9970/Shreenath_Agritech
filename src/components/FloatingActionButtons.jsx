@@ -27,10 +27,10 @@ export default function FloatingActionButtons({ lang, contact }) {
       </div>
 
       {/* Mobile Sticky Bottom Bar (Fixed to bottom for easy 1-thumb touch) */}
-      <div className="sm:hidden fixed bottom-0 inset-x-0 z-40 bg-white border-t-2 border-stone-200 p-2.5 shadow-2xl flex items-center justify-between gap-2.5">
+      <div className="sm:hidden fixed bottom-0 inset-x-0 z-40 bg-stone-950/95 backdrop-blur-md border-t border-stone-800 px-3 py-2.5 shadow-2xl flex items-center justify-between gap-2.5">
         <a
           href={`tel:${contact.phone}`}
-          className="flex-1 flex items-center justify-center gap-2 bg-stone-900 active:bg-stone-800 text-white py-3 px-3 rounded-xl font-black text-sm shadow-md"
+          className="flex-1 flex items-center justify-center gap-1.5 bg-stone-800 active:bg-stone-700 text-white py-2.5 px-3 rounded-xl font-black text-sm shadow-md border border-stone-700"
         >
           <Phone className="w-4 h-4 text-amber-400" />
           <span>{lang === 'mr' ? 'कॉल करा' : 'Call'}</span>
@@ -40,7 +40,7 @@ export default function FloatingActionButtons({ lang, contact }) {
           href={`https://wa.me/${contact.whatsapp}?text=${waText}`}
           target="_blank"
           rel="noreferrer"
-          className="flex-1 flex items-center justify-center gap-2 bg-emerald-600 active:bg-emerald-700 text-white py-3 px-3 rounded-xl font-black text-sm shadow-md"
+          className="flex-1 flex items-center justify-center gap-1.5 bg-emerald-600 active:bg-emerald-700 text-white py-2.5 px-3 rounded-xl font-black text-sm shadow-md"
         >
           <MessageCircle className="w-4 h-4 fill-white" />
           <span>{lang === 'mr' ? 'व्हॉट्सॲप' : 'WhatsApp'}</span>
