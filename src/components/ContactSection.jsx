@@ -53,15 +53,6 @@ export default function ContactSection({ lang, contact }) {
                   <p className="font-bold text-white mt-0.5 leading-snug">
                     {contact.address[lang]}
                   </p>
-                  <a
-                    href={contact.googleMapsLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-300 hover:text-amber-200 mt-2.5 bg-stone-700/80 hover:bg-stone-700 px-3 py-1.5 rounded-lg border border-stone-600 transition cursor-pointer"
-                  >
-                    <Navigation className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                    <span>{lang === 'mr' ? '📍 गुगल मॅप्सवर थेट लोकेशन पहा' : '📍 Open in Google Maps'}</span>
-                  </a>
                 </div>
               </div>
 
@@ -100,7 +91,7 @@ export default function ContactSection({ lang, contact }) {
 
           {/* Right: Embedded Interactive Map */}
           <div className="lg:col-span-6 flex flex-col gap-3">
-            <div className="relative h-64 sm:h-80 rounded-2xl overflow-hidden border-2 border-stone-700 shadow-lg bg-stone-800">
+            <div className="h-64 sm:h-80 rounded-2xl overflow-hidden border-2 border-stone-700 shadow-lg bg-stone-800">
               <iframe
                 src={contact.googleMapsEmbed}
                 width="100%"
@@ -111,33 +102,18 @@ export default function ContactSection({ lang, contact }) {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Shrinath Agritech Nursery Satana Kalwan Road"
               ></iframe>
-              <div className="absolute top-2.5 left-2.5 bg-stone-900/90 backdrop-blur-xs text-white text-[11px] sm:text-xs font-bold px-2.5 py-1 rounded-lg border border-stone-700 flex items-center gap-1.5 shadow-md pointer-events-none">
-                <MapPin className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                <span>श्रीनाथ ॲग्रीटेक, मुंजवाड (सटाणा)</span>
-              </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-              <a
-                href={contact.googleMapsLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white border border-emerald-500 p-3 rounded-xl font-bold text-xs sm:text-sm transition shadow-sm cursor-pointer"
-              >
-                <Navigation className="w-4 h-4" />
-                <span>{lang === 'mr' ? '📍 थेट गुगल मॅप्स उघडा' : '📍 Open in Google Maps'}</span>
-              </a>
-
-              <a
-                href={contact.googleMapsDirections || contact.googleMapsLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-stone-800 hover:bg-stone-700 text-amber-300 border border-stone-700 p-3 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer"
-              >
-                <MapPin className="w-4 h-4 text-amber-400" />
-                <span>{lang === 'mr' ? '🚗 रस्ता व दिशा (Directions)' : '🚗 Get Directions'}</span>
-              </a>
-            </div>
+            {/* Single Clear Google Maps Action Button */}
+            <a
+              href={contact.googleMapsLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full flex items-center justify-center gap-2.5 bg-emerald-600 hover:bg-emerald-500 active:scale-98 text-white p-3.5 rounded-xl font-bold text-sm sm:text-base transition shadow-md cursor-pointer border border-emerald-500"
+            >
+              <Navigation className="w-5 h-5 fill-white" />
+              <span>{lang === 'mr' ? '📍 थेट गुगल मॅप्स उघडा (Google Maps)' : '📍 Open in Google Maps'}</span>
+            </a>
           </div>
         </div>
 
