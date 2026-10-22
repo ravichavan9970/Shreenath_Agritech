@@ -112,7 +112,7 @@ export default function ContactSection({ lang, contact }) {
               className="w-full flex items-center justify-center gap-2.5 bg-emerald-600 hover:bg-emerald-500 active:scale-98 text-white p-3.5 rounded-xl font-bold text-sm sm:text-base transition shadow-md cursor-pointer border border-emerald-500"
             >
               <Navigation className="w-5 h-5 fill-white" />
-              <span>{lang === 'mr' ? '📍 थेट गुगल मॅप्स उघडा (Google Maps)' : '📍 Open in Google Maps'}</span>
+              <span>{lang === 'mr' ? '📍 थेट लोकेशन व रस्ता पहा' : '📍 Open Location & Directions'}</span>
             </a>
           </div>
         </div>
