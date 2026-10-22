@@ -15,24 +15,25 @@ export default function Navbar({ lang, setLang, contact, onOpenBookingModal }) {
   return (
     <header className="sticky top-0 z-40 bg-white/98 backdrop-blur-md border-b border-stone-200 shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-18 sm:h-20">
+        <div className="flex items-center justify-between py-2.5 sm:py-3.5 min-h-[60px] sm:min-h-[76px]">
           {/* Logo & Name */}
-          <a href="#" className="flex items-center gap-3">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl overflow-hidden bg-stone-950 shadow-md border border-stone-200 shrink-0 flex items-center justify-center p-0.5">
+          <a href="#" className="flex items-center gap-2 sm:gap-3 min-w-0 max-w-[70%] sm:max-w-none">
+            <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl overflow-hidden bg-stone-950 shadow-sm border border-stone-200 shrink-0 flex items-center justify-center p-0.5">
               <img
                 src={contact.logo || "/images/logo.jpg"}
                 alt="श्रीनाथ ॲग्रीटेक लोगो"
-                className="w-full h-full object-cover rounded-xl"
+                className="w-full h-full object-cover rounded-lg sm:rounded-xl"
               />
             </div>
-            <div>
-              <div className="flex items-baseline gap-1">
-                <span className="text-xl sm:text-2xl font-black text-stone-900 tracking-tight">
+            <div className="min-w-0">
+              <div className="flex items-baseline">
+                <span className="text-base sm:text-2xl font-black text-stone-900 tracking-tight leading-snug truncate">
                   {lang === 'mr' ? 'श्रीनाथ ॲग्रीटेक' : 'Shrinath Agritech'}
                 </span>
               </div>
-              <p className="text-xs sm:text-xs font-bold text-emerald-800">
-                {lang === 'mr' ? 'होलसेल भाजीपाला रोप नर्सरी • सटाणा (नाशिक)' : 'Wholesale Vegetable Seedling Nursery • Satana'}
+              <p className="text-[10px] sm:text-xs font-bold text-emerald-800 leading-tight truncate">
+                <span className="sm:hidden">{lang === 'mr' ? 'रोप नर्सरी • सटाणा' : 'Vegetable Nursery • Satana'}</span>
+                <span className="hidden sm:inline">{lang === 'mr' ? 'होलसेल भाजीपाला रोप नर्सरी • सटाणा (नाशिक)' : 'Wholesale Vegetable Seedling Nursery • Satana'}</span>
               </p>
             </div>
           </a>
@@ -87,12 +88,12 @@ export default function Navbar({ lang, setLang, contact, onOpenBookingModal }) {
             </a>
           </div>
 
-          {/* Mobile Right: Lang + Call + Menu Button */}
-          <div className="flex lg:hidden items-center gap-2">
+          {/* Mobile Right: Lang + Menu Button */}
+          <div className="flex lg:hidden items-center gap-1.5 sm:gap-2 shrink-0">
             {setLang && (
               <button
                 onClick={() => setLang(lang === 'mr' ? 'en' : 'mr')}
-                className="flex items-center gap-1 bg-stone-100 hover:bg-stone-200 text-stone-800 px-2.5 py-2 rounded-xl text-xs font-bold border border-stone-300 cursor-pointer"
+                className="flex items-center gap-1 bg-stone-100 hover:bg-stone-200 text-stone-800 px-2 py-1.5 rounded-lg text-xs font-bold border border-stone-300 cursor-pointer"
                 title="भाषा बदला / Change Language"
               >
                 <Globe className="w-3.5 h-3.5 text-emerald-700" />
@@ -100,17 +101,9 @@ export default function Navbar({ lang, setLang, contact, onOpenBookingModal }) {
               </button>
             )}
 
-            <a
-              href={`tel:${contact.phone}`}
-              className="sm:hidden p-2 rounded-xl bg-stone-100 text-stone-900 border border-stone-300"
-              title="Call"
-            >
-              <Phone className="w-5 h-5 text-emerald-700" />
-            </a>
-
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-xl text-stone-700 hover:bg-emerald-50 transition cursor-pointer"
+              className="p-1.5 sm:p-2 rounded-xl text-stone-700 hover:bg-emerald-50 transition cursor-pointer"
               aria-label="Menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

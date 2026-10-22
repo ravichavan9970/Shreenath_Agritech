@@ -142,7 +142,7 @@ export default function ContactSection({ lang, contact }) {
         </div>
 
         {/* Footer Bottom */}
-        <div className="pt-6 text-center text-xs text-stone-500 font-semibold">
+        <div className="pt-6 pb-20 sm:pb-6 text-center text-xs text-stone-500 font-semibold">
           <p>© {new Date().getFullYear()} श्रीनाथ ॲग्रीटेक (Shrinath Agritech) • सटाणा-कळवण रोड, मल्हारवाडी, मुंजवाड, ता. सटाणा, जि. नाशिक - ४२३३०१.</p>
           <p className="mt-1 text-emerald-600 font-bold">शेतकऱ्यांच्या सेवेत तत्पर!</p>
         </div>

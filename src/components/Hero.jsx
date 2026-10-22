@@ -3,13 +3,13 @@ import { Phone, MessageCircle, CheckCircle2, Truck, ShieldCheck, Sun, ArrowDown 
 
 export default function Hero({ lang, contact, onOpenBookingModal }) {
   return (
-    <section className="relative bg-gradient-to-b from-emerald-50 via-white to-stone-50 pt-6 pb-12 sm:pt-10 sm:pb-16 border-b border-stone-200">
+    <section className="relative bg-gradient-to-b from-emerald-50 via-white to-stone-50 pt-4 pb-8 sm:pt-10 sm:pb-16 border-b border-stone-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 items-center">
           {/* Left Text & Big Buttons */}
-          <div className="lg:col-span-7 space-y-5 text-center lg:text-left">
+          <div className="lg:col-span-7 space-y-4 sm:space-y-5 text-center lg:text-left">
             {/* Tag */}
-            <div className="inline-flex items-center gap-1.5 bg-emerald-100 border border-emerald-300 px-3.5 py-1.5 rounded-full text-emerald-900 text-xs sm:text-sm font-bold">
+            <div className="inline-flex items-center gap-1.5 bg-emerald-100 border border-emerald-300 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-emerald-900 text-xs sm:text-sm font-bold">
               <span>🌱</span>
               <span>
                 {lang === 'mr'
@@ -19,7 +19,7 @@ export default function Hero({ lang, contact, onOpenBookingModal }) {
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-stone-900 tracking-tight leading-tight">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-stone-900 tracking-tight leading-tight">
               {lang === 'mr' ? (
                 <>
                   निरोगी रोपे, भरघोस उत्पादन,{' '}
@@ -38,14 +38,14 @@ export default function Hero({ lang, contact, onOpenBookingModal }) {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg text-stone-700 leading-relaxed font-medium max-w-2xl mx-auto lg:mx-0">
+            <p className="text-xs sm:text-base text-stone-700 leading-relaxed font-medium max-w-2xl mx-auto lg:mx-0">
               {lang === 'mr'
                 ? 'टोमॅटो, टरबूज, पपई तैवान ७८६, कोबी, मिरची व इतर सर्व भाजीपाला रोपे होलसेल दरात उपलब्ध. हायटेक पॉलीहाऊसमध्ये वाढवलेली व उन्हात टिकणारी खात्रीशीर रोपे.'
                 : 'Wholesale seedlings for Tomato, Watermelon, Papaya Taiwan 786, Cabbage, Chilli and more. Hardened inside climate-controlled polyhouses.'}
             </p>
 
-            {/* Two Giant Buttons */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 pt-2">
+            {/* Two Action Buttons */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-2.5 sm:gap-3 pt-1">
               <a
                 href={`https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(
                   lang === 'mr'
@@ -54,47 +54,47 @@ export default function Hero({ lang, contact, onOpenBookingModal }) {
                 )}`}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-4 rounded-2xl font-black text-base sm:text-lg shadow-lg shadow-emerald-700/25 transition active:scale-95"
+                className="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-black text-sm sm:text-lg shadow-md sm:shadow-lg shadow-emerald-700/25 transition active:scale-95 cursor-pointer"
               >
-                <MessageCircle className="w-6 h-6 fill-white" />
+                <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 fill-white" />
                 <span>{lang === 'mr' ? 'व्हॉट्सॲपवर ऑर्डर द्या' : 'Order on WhatsApp'}</span>
               </a>
 
               <a
                 href={`tel:${contact.phone}`}
-                className="flex items-center justify-center gap-2 bg-stone-900 hover:bg-stone-800 text-white px-6 py-4 rounded-2xl font-black text-base sm:text-lg shadow-md transition active:scale-95"
+                className="flex items-center justify-center gap-2 bg-stone-900 hover:bg-stone-800 text-white px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-black text-sm sm:text-lg shadow-sm sm:shadow-md transition active:scale-95 cursor-pointer"
               >
-                <Phone className="w-5 h-5 text-amber-400" />
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400" />
                 <span>{lang === 'mr' ? 'थेट कॉल करा' : 'Call Directly'}</span>
               </a>
             </div>
 
             {/* 4 Simple Highlights */}
-            <div className="grid grid-cols-2 gap-3 pt-4 text-left">
-              <div className="flex items-center gap-2 bg-white p-3 rounded-xl border border-stone-200 shadow-2xs">
-                <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0" />
-                <span className="text-xs sm:text-sm font-bold text-stone-800">
+            <div className="grid grid-cols-2 gap-2 sm:gap-3 pt-2 text-left">
+              <div className="flex items-center gap-2 bg-white p-2.5 sm:p-3 rounded-xl border border-stone-200 shadow-2xs">
+                <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0" />
+                <span className="text-xs sm:text-sm font-bold text-stone-800 leading-tight">
                   {lang === 'mr' ? '१००% रोगमुक्त रोपे' : '100% Disease-Free'}
                 </span>
               </div>
 
-              <div className="flex items-center gap-2 bg-white p-3 rounded-xl border border-stone-200 shadow-2xs">
-                <Sun className="w-5 h-5 text-amber-500 shrink-0" />
-                <span className="text-xs sm:text-sm font-bold text-stone-800">
+              <div className="flex items-center gap-2 bg-white p-2.5 sm:p-3 rounded-xl border border-stone-200 shadow-2xs">
+                <Sun className="w-4 h-4 sm:w-5 sm:h-5 text-amber-500 shrink-0" />
+                <span className="text-xs sm:text-sm font-bold text-stone-800 leading-tight">
                   {lang === 'mr' ? 'उन्हात टिकणारे हार्डनिंग' : 'Sun-Hardened'}
                 </span>
               </div>
 
-              <div className="flex items-center gap-2 bg-white p-3 rounded-xl border border-stone-200 shadow-2xs">
-                <Truck className="w-5 h-5 text-emerald-600 shrink-0" />
-                <span className="text-xs sm:text-sm font-bold text-stone-800">
+              <div className="flex items-center gap-2 bg-white p-2.5 sm:p-3 rounded-xl border border-stone-200 shadow-2xs">
+                <Truck className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0" />
+                <span className="text-xs sm:text-sm font-bold text-stone-800 leading-tight">
                   {lang === 'mr' ? 'शेतावर थेट डिलिव्हरी' : 'Farm Gate Delivery'}
                 </span>
               </div>
 
-              <div className="flex items-center gap-2 bg-white p-3 rounded-xl border border-stone-200 shadow-2xs">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
-                <span className="text-xs sm:text-sm font-bold text-stone-800">
+              <div className="flex items-center gap-2 bg-white p-2.5 sm:p-3 rounded-xl border border-stone-200 shadow-2xs">
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0" />
+                <span className="text-xs sm:text-sm font-bold text-stone-800 leading-tight">
                   {lang === 'mr' ? 'थेट होलसेल दर' : 'Wholesale Rates'}
                 </span>
               </div>
@@ -102,8 +102,8 @@ export default function Hero({ lang, contact, onOpenBookingModal }) {
           </div>
 
           {/* Right Real Nursery Photo Card */}
-          <div className="lg:col-span-5">
-            <div className="bg-white rounded-3xl p-3 border-2 border-emerald-600/30 shadow-xl overflow-hidden">
+          <div className="lg:col-span-5 mt-4 lg:mt-0">
+            <div className="bg-white rounded-2xl sm:rounded-3xl p-2.5 sm:p-3 border-2 border-emerald-600/30 shadow-lg overflow-hidden">
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
                 <img
                   src="/images/polyhouse-nursery-1.jpg"
