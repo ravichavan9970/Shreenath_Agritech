@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, MessageCircle, ArrowRight } from 'lucide-react';
 
 export default function PlantCalculator({ lang, contact }) {
@@ -76,10 +77,16 @@ export default function PlantCalculator({ lang, contact }) {
   );
 
   return (
-    <section id="calculator" className="py-12 sm:py-16 bg-stone-100 border-b border-stone-200">
+    <section id="calculator" className="py-12 sm:py-16 bg-stone-100 border-b border-stone-200 overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-8 sm:mb-10">
+        {/* Header with Smooth Scroll Reveal */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center mb-8 sm:mb-10"
+        >
           <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-900 border border-emerald-300 text-xs sm:text-sm font-black px-3.5 py-1 rounded-full mb-2">
             <Calculator className="w-4 h-4 text-emerald-700" />
             <span>{lang === 'mr' ? 'शेतकऱ्यांसाठी मोफत साधन' : 'Free Tool'}</span>
@@ -92,10 +99,16 @@ export default function PlantCalculator({ lang, contact }) {
               ? 'फक्त पीक आणि जमीन निवडा - किती रोपे लागतील ते लगेच समजेल!'
               : 'Pick your crop and land area to instantly see how many seedlings you need.'}
           </p>
-        </div>
+        </motion.div>
 
-        {/* The Simple Calculator Card */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border-2 border-stone-200 space-y-6">
+        {/* The Simple Calculator Card with Smooth Entry */}
+        <motion.div
+          initial={{ opacity: 0, y: 35, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+          className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border-2 border-stone-200 space-y-6"
+        >
           {/* Step 1: Select Crop */}
           <div>
             <label className="block text-sm sm:text-base font-black text-stone-900 mb-2.5">
@@ -107,9 +120,9 @@ export default function PlantCalculator({ lang, contact }) {
                   key={c.id}
                   type="button"
                   onClick={() => setSelectedCrop(c)}
-                  className={`p-3 rounded-2xl border-2 text-left font-bold transition flex items-center gap-2 cursor-pointer ${
+                  className={`p-3 rounded-2xl border-2 text-left font-bold transition-all duration-200 flex items-center gap-2 cursor-pointer active:scale-95 ${
                     selectedCrop.id === c.id
-                      ? 'border-emerald-600 bg-emerald-50 text-emerald-950 ring-2 ring-emerald-500/20 shadow-xs'
+                      ? 'border-emerald-600 bg-emerald-50 text-emerald-950 ring-2 ring-emerald-500/20 shadow-xs scale-[1.02]'
                       : 'border-stone-200 bg-stone-50 text-stone-700 hover:bg-stone-100'
                   }`}
                 >
@@ -131,9 +144,9 @@ export default function PlantCalculator({ lang, contact }) {
                   key={idx}
                   type="button"
                   onClick={() => setAcreCount(qa.val)}
-                  className={`px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition cursor-pointer ${
+                  className={`px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all duration-200 cursor-pointer active:scale-95 ${
                     acreCount === qa.val
-                      ? 'bg-emerald-700 text-white shadow-md'
+                      ? 'bg-emerald-700 text-white shadow-md scale-105'
                       : 'bg-stone-100 text-stone-800 hover:bg-stone-200 border border-stone-200'
                   }`}
                 >
@@ -144,14 +157,23 @@ export default function PlantCalculator({ lang, contact }) {
           </div>
 
           {/* Big Clear Result Box */}
-          <div className="bg-gradient-to-br from-emerald-800 to-green-900 text-white rounded-2xl p-6 text-center shadow-lg">
+          <div className="bg-gradient-to-br from-emerald-800 to-green-900 text-white rounded-2xl p-6 text-center shadow-lg relative overflow-hidden">
             <span className="text-xs sm:text-sm text-emerald-200 font-bold block uppercase tracking-wider">
               {lang === 'mr' ? 'तुम्हाला लागतील अंदाजे रोपे:' : 'Seedlings Required:'}
             </span>
 
-            <div className="text-4xl sm:text-5xl font-black text-amber-300 my-2">
-              ~{totalSeedlings.toLocaleString()} {lang === 'mr' ? 'रोपे' : 'plants'}
-            </div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`${selectedCrop.id}-${acreCount}`}
+                initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3 }}
+                className="text-4xl sm:text-5xl font-black text-amber-300 my-2"
+              >
+                ~{totalSeedlings.toLocaleString()} {lang === 'mr' ? 'रोपे' : 'plants'}
+              </motion.div>
+            </AnimatePresence>
 
             <p className="text-xs sm:text-sm text-emerald-100 font-medium">
               🌱 {selectedCrop.name[lang]} • {getAreaText()} • {lang === 'mr' ? 'शिफारस अंतर' : 'Spacing'}: {selectedCrop.spacing}
@@ -163,7 +185,7 @@ export default function PlantCalculator({ lang, contact }) {
                 href={`https://wa.me/${contact.whatsapp}?text=${waMessage}`}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-amber-400 hover:bg-amber-300 active:bg-amber-500 text-stone-950 font-black px-6 py-3.5 rounded-xl text-sm sm:text-base shadow-lg transition"
+                className="inline-flex items-center justify-center gap-2 bg-amber-400 hover:bg-amber-300 active:bg-amber-500 hover:scale-105 active:scale-95 text-stone-950 font-black px-6 py-3.5 rounded-xl text-sm sm:text-base shadow-lg transition-all"
               >
                 <MessageCircle className="w-5 h-5 fill-stone-950" />
                 <span>{lang === 'mr' ? 'ही रोपे व्हॉट्सॲपवर बुक करा' : 'Book on WhatsApp'}</span>
@@ -171,7 +193,7 @@ export default function PlantCalculator({ lang, contact }) {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

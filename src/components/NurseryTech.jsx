@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { ShieldCheck, Sun, Truck, Check } from 'lucide-react';
 
 export default function NurseryTech({ lang }) {
@@ -45,10 +46,16 @@ export default function NurseryTech({ lang }) {
   ];
 
   return (
-    <section id="tech" className="py-12 sm:py-16 bg-white border-b border-stone-200">
+    <section id="tech" className="py-12 sm:py-16 bg-white border-b border-stone-200 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10">
+        {/* Header with Smooth Scroll Reveal */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center max-w-3xl mx-auto mb-10"
+        >
           <div className="inline-block bg-emerald-100 text-emerald-900 border border-emerald-300 text-xs sm:text-sm font-black px-3.5 py-1 rounded-full mb-2">
             {lang === 'mr' ? '⭐ आमची खासियत' : '⭐ Our Strengths'}
           </div>
@@ -60,23 +67,33 @@ export default function NurseryTech({ lang }) {
               ? 'आम्ही फक्त रोपे विकत नाही, तर शेतकऱ्यांच्या भरघोस उत्पादनाची आणि फायद्याची खात्री देतो.'
               : 'Dedicated to bumper yields and healthy crop establishment for every grower.'}
           </p>
-        </div>
+        </motion.div>
 
-        {/* 3 Large Simple Cards */}
+        {/* 3 Large Simple Cards with Staggered Scroll Reveal */}
         <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
           {highlights.map((item, idx) => {
             const Icon = item.icon;
             return (
-              <div
+              <motion.div
                 key={idx}
-                className="bg-stone-50 rounded-3xl border-2 border-stone-200 overflow-hidden shadow-xs hover:shadow-lg hover:border-emerald-600 transition flex flex-col justify-between"
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{
+                  duration: 0.55,
+                  delay: idx * 0.15,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                whileHover={{ y: -6, transition: { duration: 0.25 } }}
+                className="bg-stone-50 rounded-3xl border-2 border-stone-200 overflow-hidden shadow-xs hover:shadow-xl hover:border-emerald-600 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="relative aspect-[16/10] overflow-hidden bg-stone-200">
                     <img
                       src={item.image}
                       alt={item.title[lang]}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
                     />
                   </div>
 
@@ -85,7 +102,7 @@ export default function NurseryTech({ lang }) {
                       <div className="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
                         <Icon className="w-5 h-5 text-emerald-700" />
                       </div>
-                      <h3 className="text-lg font-black text-stone-900 leading-tight">
+                      <h3 className="text-lg font-black text-stone-900 leading-tight group-hover:text-emerald-800 transition-colors">
                         {item.title[lang]}
                       </h3>
                     </div>
@@ -104,7 +121,7 @@ export default function NurseryTech({ lang }) {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

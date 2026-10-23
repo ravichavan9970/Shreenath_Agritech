@@ -1,13 +1,20 @@
 import React from 'react';
-import { MapPin, Phone, MessageCircle, Clock, Navigation, Sprout } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { MapPin, Phone, MessageCircle, Clock, Navigation } from 'lucide-react';
 
 export default function ContactSection({ lang, contact }) {
   return (
-    <footer id="contact" className="bg-stone-900 text-stone-200 pt-8 pb-16 sm:pt-16 sm:pb-12">
+    <footer id="contact" className="bg-stone-900 text-stone-200 pt-8 pb-16 sm:pt-16 sm:pb-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8 items-start pb-8 border-b border-stone-800">
-          {/* Left: Contact Info (Col 7) */}
-          <div className="lg:col-span-6 space-y-5">
+          {/* Left: Contact Info (Col 6) with Smooth Scroll In from Left */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:col-span-6 space-y-5"
+          >
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl overflow-hidden bg-stone-950 shadow-md border border-stone-700 shrink-0 p-0.5 flex items-center justify-center">
                 <img
@@ -28,7 +35,7 @@ export default function ContactSection({ lang, contact }) {
 
             <div className="space-y-3.5 text-sm sm:text-base">
               {/* Phone */}
-              <div className="flex items-start gap-3 bg-stone-800/80 p-3.5 sm:p-4 rounded-2xl border border-stone-700">
+              <div className="flex items-start gap-3 bg-stone-800/80 p-3.5 sm:p-4 rounded-2xl border border-stone-700 hover:border-amber-400/50 transition-colors">
                 <Phone className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
                 <div>
                   <span className="text-xs text-stone-400 block font-bold">
@@ -44,7 +51,7 @@ export default function ContactSection({ lang, contact }) {
               </div>
 
               {/* Address */}
-              <div className="flex items-start gap-3 bg-stone-800/80 p-3.5 sm:p-4 rounded-2xl border border-stone-700">
+              <div className="flex items-start gap-3 bg-stone-800/80 p-3.5 sm:p-4 rounded-2xl border border-stone-700 hover:border-emerald-500/50 transition-colors">
                 <MapPin className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
                   <span className="text-xs text-stone-400 block font-bold">
@@ -87,10 +94,16 @@ export default function ContactSection({ lang, contact }) {
                 <span>{lang === 'mr' ? 'थेट फोन लावा' : 'Call Directly'}</span>
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Right: Embedded Interactive Map */}
-          <div className="lg:col-span-6 flex flex-col gap-2.5">
+          {/* Right: Embedded Interactive Map with Smooth Scroll In from Right */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:col-span-6 flex flex-col gap-2.5"
+          >
             <div className="h-56 sm:h-80 rounded-2xl overflow-hidden border-2 border-stone-700 shadow-lg bg-stone-800">
               <iframe
                 src={contact.googleMapsEmbed}
@@ -114,7 +127,7 @@ export default function ContactSection({ lang, contact }) {
               <Navigation className="w-4 h-4 sm:w-5 sm:h-5 fill-white" />
               <span>{lang === 'mr' ? '📍 थेट लोकेशन व रस्ता पहा' : '📍 Open Location & Directions'}</span>
             </a>
-          </div>
+          </motion.div>
         </div>
 
         {/* Footer Bottom (Compact - No Empty Space) */}
